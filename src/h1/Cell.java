@@ -90,7 +90,8 @@ public class Cell {
                 }
             }
         }
-
+        this.numLivingNeighbors = count;
+        decideNextStatus();
     }
 }
 

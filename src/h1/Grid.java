@@ -34,8 +34,23 @@ public class Grid {
             }
         }
     }
-    public void computeNextGen(){
-
+    public void computeNextGen() {
+        for (int i = 0; i < gridArray.length; i++) {
+            for(int j = 0; j < gridArray[0].length; j++) {
+               gridArray[i][j].countLivingNeighbors(gridArray);
+            }
+        }
+        for (int i = 0; i < gridArray.length; i++){
+            for (int j = 0; j < gridArray[0].length; j++) {
+               boolean zukunft = gridArray[i][j].isAliveNextGen();
+                gridArray[i][j].setAlive(zukunft);
+            }
+        }
+    }
+    public void computeGeneration(int n){
+        for (int i = 0; i < n; i++) {
+            computeNextGen();
+        }
     }
 }
 
