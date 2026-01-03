@@ -66,7 +66,6 @@ public class Cell {
                 isAliveNextGen = false;
             }
         } else {
-            // Fall: Zelle ist tot (das ist das 'else' zu 'if(alive)')
             if (numLivingNeighbors == 3) {
                 isAliveNextGen = true;
             } else {
