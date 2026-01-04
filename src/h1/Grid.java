@@ -4,10 +4,12 @@ public class Grid {
     private Cell[][] gridArray;
 
     public Cell[][] getGridArray() {
+
         return gridArray;
     }
 
     public void setGridArray(Cell[][] gridArray) {
+
         this.gridArray = gridArray;
     }
 
